@@ -26,9 +26,9 @@ import {
   Share2,
   Maximize2,
   Copy,
-  Settings,
   BotMessageSquare,
-  Shuffle
+  Shuffle,
+  Tag
 } from 'lucide-react';
 import { ProblemDetail, CodeRunResponse, AIReviewResponse, AICoachMessage } from '../types';
 import { api } from '../services/api';
@@ -820,7 +820,7 @@ export const ProblemWorkspace: React.FC<ProblemWorkspaceProps> = ({
           {/* Monaco Code Editor */}
           <div className="flex-1 bg-[#1E1E1E] overflow-hidden">
             <CodeEditor
-              code={code}
+              value={code}
               language={monacoLanguage}
               onChange={(val) => setCode(val)}
               fontSize={fontSize}
@@ -964,15 +964,15 @@ export const ProblemWorkspace: React.FC<ProblemWorkspaceProps> = ({
                         </div>
 
                         <div className="flex items-center gap-4 text-xs text-[#A1A1AA]">
-                          <span>Runtime: <strong className="text-white">{runResult.runtime_ms} ms</strong></span>
-                          <span>Memory: <strong className="text-white">{runResult.memory_mb} MB</strong></span>
+                          <span>Runtime: <strong className="text-white">{runResult.execution_time_ms} ms</strong></span>
+                          <span>Memory: <strong className="text-white">{runResult.memory_kb} KB</strong></span>
                         </div>
                       </div>
 
                       {/* Details Box */}
-                      {runResult.test_results && runResult.test_results.length > 0 && (
+                      {runResult.results && runResult.results.length > 0 && (
                         <div className="space-y-2">
-                          {runResult.test_results.map((tr, idx) => (
+                          {runResult.results.map((tr, idx) => (
                             <div
                               key={idx}
                               className={`p-2.5 rounded border ${
@@ -1030,14 +1030,14 @@ export const ProblemWorkspace: React.FC<ProblemWorkspaceProps> = ({
                           <span>Complexity Breakdown:</span>
                         </div>
                         <div className="text-xs text-[#EFF1F6] leading-relaxed">
-                          {aiReview.complexity_analysis}
+                          Time: {aiReview.time_complexity} (Optimal: {aiReview.time_complexity_optimal}) • Space: {aiReview.space_complexity} (Optimal: {aiReview.space_complexity_optimal})
                         </div>
                       </div>
 
-                      {aiReview.suggestions && aiReview.suggestions.length > 0 && (
+                      {aiReview.recommendations && aiReview.recommendations.length > 0 && (
                         <div className="p-3 bg-[#242424] border border-[#3C3C3C] rounded-lg space-y-1.5">
                           <div className="text-[11px] font-bold text-[#FFA116]">Optimization Invariants:</div>
-                          {aiReview.suggestions.map((s, idx) => (
+                          {aiReview.recommendations.map((s, idx) => (
                             <div key={idx} className="text-xs text-[#D1D5DB] flex items-start gap-1.5">
                               <span>•</span>
                               <span>{s}</span>

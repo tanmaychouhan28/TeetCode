@@ -97,20 +97,20 @@ export const ProgressView: React.FC = () => {
           <div className="space-y-3 font-mono text-xs">
             <div className="p-3 bg-[#1A1A1A] border border-[#2C2C2C] rounded-lg flex items-center justify-between">
               <span className="text-[#00B8A3] font-bold">Easy</span>
-              <span className="text-white">{analytics.by_difficulty.Easy.solved} / {analytics.by_difficulty.Easy.total}</span>
-              <span className="text-[#858585]">{analytics.by_difficulty.Easy.accuracy}% Acc</span>
+              <span className="text-white">{analytics.difficulty_distribution.easy.solved} / {analytics.difficulty_distribution.easy.total}</span>
+              <span className="text-[#858585]">{analytics.difficulty_distribution.easy.percentage}% Solved</span>
             </div>
 
             <div className="p-3 bg-[#1A1A1A] border border-[#2C2C2C] rounded-lg flex items-center justify-between">
               <span className="text-[#FFA116] font-bold">Medium</span>
-              <span className="text-white">{analytics.by_difficulty.Medium.solved} / {analytics.by_difficulty.Medium.total}</span>
-              <span className="text-[#858585]">{analytics.by_difficulty.Medium.accuracy}% Acc</span>
+              <span className="text-white">{analytics.difficulty_distribution.medium.solved} / {analytics.difficulty_distribution.medium.total}</span>
+              <span className="text-[#858585]">{analytics.difficulty_distribution.medium.percentage}% Solved</span>
             </div>
 
             <div className="p-3 bg-[#1A1A1A] border border-[#2C2C2C] rounded-lg flex items-center justify-between">
               <span className="text-[#FF375F] font-bold">Hard</span>
-              <span className="text-white">{analytics.by_difficulty.Hard.solved} / {analytics.by_difficulty.Hard.total}</span>
-              <span className="text-[#858585]">{analytics.by_difficulty.Hard.accuracy}% Acc</span>
+              <span className="text-white">{analytics.difficulty_distribution.hard.solved} / {analytics.difficulty_distribution.hard.total}</span>
+              <span className="text-[#858585]">{analytics.difficulty_distribution.hard.percentage}% Solved</span>
             </div>
           </div>
         </div>
@@ -123,18 +123,18 @@ export const ProgressView: React.FC = () => {
           </h3>
 
           <div className="space-y-3 font-mono text-xs">
-            {Object.entries(analytics.by_topic).map(([topicName, stats]) => (
-              <div key={topicName} className="space-y-1">
+            {analytics.topic_breakdown.map((item) => (
+              <div key={item.topic} className="space-y-1">
                 <div className="flex justify-between text-[11px]">
-                  <span className="text-white font-medium">{topicName}</span>
-                  <span className="text-[#858585]">{stats.solved}/{stats.total} Solved ({stats.accuracy}% accuracy)</span>
+                  <span className="text-white font-medium">{item.topic}</span>
+                  <span className="text-[#858585]">{item.solved}/{item.total} Solved ({item.accuracy}% accuracy)</span>
                 </div>
                 <div className="h-2 bg-[#1A1A1A] rounded-full overflow-hidden border border-[#2C2C2C]">
                   <div
                     className={`h-full rounded-full ${
-                      stats.accuracy > 70 ? 'bg-[#00B8A3]' : stats.accuracy > 40 ? 'bg-[#FFA116]' : 'bg-[#FF375F]'
+                      item.accuracy > 70 ? 'bg-[#00B8A3]' : item.accuracy > 40 ? 'bg-[#FFA116]' : 'bg-[#FF375F]'
                     }`}
-                    style={{ width: `${stats.accuracy}%` }}
+                    style={{ width: `${item.accuracy}%` }}
                   ></div>
                 </div>
               </div>

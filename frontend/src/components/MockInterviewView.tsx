@@ -247,14 +247,14 @@ export const MockInterviewView: React.FC = () => {
                   <div
                     key={idx}
                     className={`p-3.5 rounded-xl text-xs leading-relaxed ${
-                      msg.role === 'interviewer'
+                      msg.role === 'assistant'
                         ? 'bg-[#1A1A1A] border border-[#333333] text-[#EFF1F6]'
                         : 'bg-[#2A2A2A] border border-[#3C3C3C] text-white ml-6'
                     }`}
                   >
                     <div className="text-[10px] font-mono font-bold mb-1 flex items-center justify-between">
-                      <span className={msg.role === 'interviewer' ? 'text-[#00B8A3]' : 'text-[#FFA116]'}>
-                        {msg.role === 'interviewer' ? '👔 Interviewer (Staff Engineer)' : '👤 You'}
+                      <span className={msg.role === 'assistant' ? 'text-[#00B8A3]' : 'text-[#FFA116]'}>
+                        {msg.role === 'assistant' ? '👔 Interviewer (Staff Engineer)' : '👤 You'}
                       </span>
                     </div>
                     <div className="whitespace-pre-wrap">{msg.content}</div>

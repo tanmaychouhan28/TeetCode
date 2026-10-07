@@ -1,71 +1,233 @@
-# TeetCode — The Next-Generation Algorithmic Mastery Platform
+<div align="center">
 
-**"Don't just memorize solutions. Understand why they work."**
+<br/>
 
-TeetCode is a modern web application built for software engineers preparing for high-stakes technical interviews. Inspired by the clean, focused interface of LeetCode and NeetCode, TeetCode elevates problem solving through **Socratic AI mentorship**, **progressive 5-tier hint unlocking**, **instant safe code execution**, and **deep diagnostic mistake detection**.
+```
+  ████████╗███████╗███████╗████████╗ ██████╗ ██████╗ ██████╗ ███████╗
+     ██╔══╝██╔════╝██╔════╝╚══██╔══╝██╔════╝██╔═══██╗██╔══██╗██╔════╝
+     ██║   █████╗  █████╗     ██║   ██║     ██║   ██║██║  ██║█████╗  
+     ██║   ██╔══╝  ██╔══╝     ██║   ██║     ██║   ██║██║  ██║██╔══╝  
+     ██║   ███████╗███████╗   ██║   ╚██████╗╚██████╔╝██████╔╝███████╗
+     ╚═╝   ╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+```
 
----
+# 🚀 TeetCode
+### *The Next-Generation Algorithmic Mastery Platform*
 
-## 🎨 Visual Identity & LeetCode Aesthetics
+<br/>
 
-TeetCode delivers an authentic, developer-first coding environment:
+> **"Don't just memorize solutions — understand *why* they work."**
 
-- **LeetCode Dark Theme**: Refined `#1A1A1A` base with `#262626` card surfaces and `#333333` crisp borders.
-- **Accurate Difficulty Coding**:
-  - Easy: `#00B8A3` (Emerald Green)
-  - Medium: `#FFA116` (Amber Gold)
-  - Hard: `#FF375F` (Crimson Rose)
-- **Submit Action**: `#2CBB5D` (LeetCode Green)
-- **Developer Typography**: Inter + JetBrains Mono for code blocks.
-- **Precision IDE**: Split-view editor with tabbed problem descriptions, progressive hint accordions, interactive Socratic chat, testcase runner, and instant complexity diagnostics.
+<br/>
 
----
+[![Made by Tanmay](https://img.shields.io/badge/Made%20by-Tanmay%20Chouhan-orange?style=for-the-badge&logo=github)](https://github.com/tanmaychouhan28)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 
-## 🚀 Core Features
-
-### 1. LeetCode-Inspired Problem Discovery
-- Curated catalog with standard problem numbering (`1. Two Sum`, `200. Number of Islands`, `146. LRU Cache`, etc.).
-- Category tags carousel with problem counts.
-- Search with instant shortcut `/` and multi-parameter filters (Difficulty, Status, Topics).
-- "Pick One" random problem selector.
-
-### 2. Split-Screen Problem Workspace (IDE)
-- **Left Panel**:
-  - **Description**: Full problem statements, formatted examples with input/output blocks, constraints, company tags.
-  - **Editorial & Progressive Hints**: 5-tier gradual unlock (Conceptual Orientation → Invariant Selection → Pseudo-code → Logic Details → Full Reference Solution).
-  - **Socratic AI Coach**: Interactive AI mentor asking conceptual questions to guide invariant discovery.
-  - **Submissions**: History of attempts with runtime and memory benchmarks.
-- **Right Panel**:
-  - Multi-language support: **C++ (g++ 17), Python 3, Java 17, JavaScript (Node.js)**.
-  - Testcase Runner: Pre-configured test cases + custom test case runner.
-  - Diff view for Expected vs Actual output.
-  - AST complexity and code quality review.
-
-### 3. Study Plan & Personalized Roadmap
-- 14 sequential topic modules (Arrays & Hashing → Two Pointers → Sliding Window → Stack → Linked Lists → Trees → Graphs → Dynamic Programming).
-- Mastery percentages, historical accuracy, and weak spot diagnostics.
-
-### 4. Mock Technical Interview Simulator
-- Live multi-stage technical interview practice simulating Google, Meta, and Quantitative Trading rubrics.
-- Socratic interviewer evaluation and debrief scorecard.
-
-### 5. Algorithmic Invariant Notes
-- Personal cheatsheet and markdown knowledge base with pre-built algorithmic templates.
+<br/>
 
 ---
 
-## 🛠️ Quickstart
+</div>
 
-### Frontend:
+## 🎯 What is TeetCode?
+
+**TeetCode** is a premium coding interview preparation platform built from the ground up by **Tanmay Chouhan**. It combines the clean, focused problem-solving interface inspired by LeetCode with an intelligent **Socratic AI Mentor** that teaches you *how to think*, not just what to code.
+
+Whether you're grinding for FAANG, preparing for quant interviews, or leveling up your algorithmic thinking — TeetCode has you covered.
+
+---
+
+## ✨ Features at a Glance
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧠 Socratic AI Mentorship
+An AI coach that asks you the right questions — guiding your reasoning step by step, never giving away answers too early. Think of it as a world-class tutor available 24/7.
+
+</td>
+<td width="50%">
+
+### 💻 Real-Time Code Execution
+Write and run code in **C++17, Python 3, Java 17, and JavaScript (Node.js)** instantly inside the browser — no setup needed.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔓 5-Tier Progressive Hints
+Stuck? Unlock hints gradually — from a nudge about the concept, all the way to a full reference solution. You choose how much help you need.
+
+</td>
+<td width="50%">
+
+### 📊 Deep Mistake Diagnostics
+Every wrong submission gets analyzed. TeetCode tells you *why* it failed — off-by-one errors, wrong invariant, edge case missed — so you learn, not just retry.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🗺️ Personalized Roadmap
+14 sequential DSA modules — from Arrays & Hashing to Dynamic Programming. Track your mastery, identify weaknesses, and follow a structured path.
+
+</td>
+<td width="50%">
+
+### 🎤 Mock Interview Simulator
+Simulate real technical interviews with a Socratic AI interviewer. Get evaluated on logic, communication, and problem-solving with a full debrief scorecard.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎨 Design Philosophy
+
+TeetCode is built with a **developer-first, distraction-free** aesthetic:
+
+| Element | Value | Purpose |
+|---|---|---|
+| 🎨 Base Background | `#1A1A1A` | LeetCode-accurate dark canvas |
+| 📦 Card Surface | `#262626` | Elevated content areas |
+| 🟢 Easy Difficulty | `#00B8A3` | Emerald Green |
+| 🟡 Medium Difficulty | `#FFA116` | Amber Gold |
+| 🔴 Hard Difficulty | `#FF375F` | Crimson Rose |
+| ✅ Submit Action | `#2CBB5D` | LeetCode Green |
+| 🔤 Code Font | `JetBrains Mono` | Precision monospace |
+| 🔤 UI Font | `Inter` | Clean sans-serif |
+
+---
+
+## 🛠️ Tech Stack
+
+```
+Frontend                    Backend
+─────────────────────       ─────────────────────
+React 18 + TypeScript       FastAPI (Python 3.11)
+Vite (build tool)           SQLAlchemy ORM
+Tailwind CSS                SQLite / PostgreSQL
+Lucide React Icons          Google Gemini AI API
+Monaco-style Editor         Uvicorn ASGI Server
+```
+
+---
+
+## ⚡ Quickstart
+
+### 🖥️ Frontend
+
 ```bash
+# Navigate to frontend
 cd frontend
+
+# Install dependencies
 npm install
+
+# Start dev server (runs on http://localhost:5173)
 npm run dev
 ```
 
-### Backend:
+### 🔧 Backend
+
 ```bash
+# Navigate to backend
 cd backend
-pip install -r requirements.txt # (or uvicorn fastapi sqlalchemy)
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Start the API server (runs on http://localhost:8000)
 python -m backend.main
 ```
+
+### 🗄️ Seed Problems
+
+```bash
+# Load the full problem database
+python backend/seed_data.py
+```
+
+---
+
+## 📁 Project Structure
+
+```
+TeetCode/
+├── 📂 frontend/
+│   ├── 📂 src/
+│   │   ├── 📂 components/
+│   │   │   ├── 🧩 LandingPage.tsx       — Hero, features, CTA
+│   │   │   ├── 🧩 Navbar.tsx            — Top navigation bar
+│   │   │   ├── 🧩 Sidebar.tsx           — Left nav sidebar
+│   │   │   ├── 🧩 ProblemsView.tsx      — Problem catalog & filters
+│   │   │   ├── 🧩 ProblemWorkspace.tsx  — Split-screen IDE
+│   │   │   ├── 🧩 DashboardView.tsx     — User stats & heatmap
+│   │   │   ├── 🧩 RoadmapView.tsx       — Study plan modules
+│   │   │   ├── 🧩 MockInterviewView.tsx — AI interview simulator
+│   │   │   ├── 🧩 ProgressView.tsx      — Charts & analytics
+│   │   │   ├── 🧩 NotesView.tsx         — Personal algorithm notes
+│   │   │   └── 🧩 TeetCodeLogo.tsx      — Brand logo component
+│   │   ├── 📄 App.tsx                   — Root application
+│   │   └── 📄 index.css                 — Global design tokens
+│   └── 📄 index.html
+│
+├── 📂 backend/
+│   ├── 📄 main.py                       — FastAPI app & routes
+│   ├── 📄 seed_data.py                  — Problem seeder script
+│   └── 📄 requirements.txt
+│
+└── 📄 README.md                         — You are here!
+```
+
+---
+
+## 🗺️ Learning Roadmap Modules
+
+| # | Module | Key Problems |
+|---|--------|-------------|
+| 1 | **Arrays & Hashing** | Two Sum, Contains Duplicate, Group Anagrams |
+| 2 | **Two Pointers** | Valid Palindrome, 3Sum, Container With Most Water |
+| 3 | **Sliding Window** | Best Time to Buy Stock, Longest Substring Without Repeating |
+| 4 | **Stack** | Valid Parentheses, Min Stack, Daily Temperatures |
+| 5 | **Binary Search** | Binary Search, Search Rotated Array, Find Minimum |
+| 6 | **Linked Lists** | Reverse Linked List, Merge Two Lists, Detect Cycle |
+| 7 | **Trees** | Invert Binary Tree, BFS, BST Validation, Serialize & Deserialize |
+| 8 | **Tries** | Implement Trie, Design Add & Search Words |
+| 9 | **Heap / Priority Queue** | Kth Largest, Task Scheduler, Merge K Sorted Lists |
+| 10 | **Backtracking** | Permutations, Subsets, N-Queens |
+| 11 | **Graphs** | Clone Graph, Number of Islands, Course Schedule |
+| 12 | **Advanced Graphs** | Dijkstra, Prim's MST, Network Delay Time |
+| 13 | **1D Dynamic Programming** | Climbing Stairs, House Robber, Coin Change |
+| 14 | **2D Dynamic Programming** | Unique Paths, Longest Common Subsequence |
+
+---
+
+## 🤝 Contributing
+
+This project is built and maintained by **Tanmay Chouhan**. If you'd like to contribute, raise an issue or submit a pull request — all contributions are welcome!
+
+---
+
+<div align="center">
+
+<br/>
+
+**Built with ❤️ by [Tanmay Chouhan](https://github.com/tanmaychouhan28)**
+
+*"The best way to learn algorithms is to be asked the right questions."*
+
+<br/>
+
+[![Star this repo](https://img.shields.io/github/stars/tanmaychouhan28/TeetCode?style=social)](https://github.com/tanmaychouhan28/TeetCode)
+
+<br/>
+
+</div>

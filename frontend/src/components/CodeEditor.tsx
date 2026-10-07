@@ -181,32 +181,32 @@ function renderHtml(tokens: Token[]): string {
   }).join('');
 }
 
-/* ─── Main Component ────────────────────────────────────────────────────── */
 interface CodeEditorProps {
   value: string;
   onChange: (val: string) => void;
   language: string;
+  fontSize?: number;
 }
 
 const TAB = '    ';
 
-const SHARED: React.CSSProperties = {
-  position: 'absolute',
-  top: 0, left: 0, right: 0, bottom: 0,
-  margin: 0,
-  padding: '12px 16px',
-  whiteSpace: 'pre',
-  wordWrap: 'normal' as const,
-  overflow: 'auto',
-  fontFamily: "'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace",
-  fontSize: '13px',
-  lineHeight: '1.65',
-  tabSize: 4,
-};
-
-export const CodeEditor: React.FC<CodeEditorProps> = ({ value, onChange, language }) => {
+export const CodeEditor: React.FC<CodeEditorProps> = ({ value, onChange, language, fontSize = 13 }) => {
   const taRef  = useRef<HTMLTextAreaElement>(null);
   const preRef = useRef<HTMLPreElement>(null);
+
+  const sharedStyle: React.CSSProperties = {
+    position: 'absolute',
+    top: 0, left: 0, right: 0, bottom: 0,
+    margin: 0,
+    padding: '12px 16px',
+    whiteSpace: 'pre',
+    wordWrap: 'normal' as const,
+    overflow: 'auto',
+    fontFamily: "'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace",
+    fontSize: `${fontSize}px`,
+    lineHeight: '1.65',
+    tabSize: 4,
+  };
 
   const syncScroll = useCallback(() => {
     if (taRef.current && preRef.current) {
@@ -264,7 +264,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ value, onChange, languag
       <pre
         ref={preRef}
         aria-hidden
-        style={{ ...SHARED, background: 'transparent', color: C.plain, pointerEvents: 'none', userSelect: 'none' }}
+        style={{ ...sharedStyle, background: 'transparent', color: C.plain, pointerEvents: 'none', userSelect: 'none' }}
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <textarea
@@ -278,7 +278,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ value, onChange, languag
         autoCorrect="off"
         autoCapitalize="off"
         style={{
-          ...SHARED,
+          ...sharedStyle,
           background: 'transparent',
           color: 'transparent',
           caretColor: '#AEAFAD',
