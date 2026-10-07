@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #262626;
+  --bg-surface: #333333;
+  --bg-elevated: #3E3E3E;
+  --bg-editor: #1E1E1E;
+  --border-default: #3C3C3C;
+  --border-subtle: #2E2E2E;
+  --text-primary: #EFF1F6;
+  --text-secondary: #A1A1AA;
+  --text-muted: #858585;
+  --brand-leetcode: #FFA116;
+  --brand-success: #00B8A3;
+  --brand-submit: #2CBB5D;
+  --brand-warning: #FFA116;
+  --brand-error: #FF375F;
+}
+
+@theme {
+  --color-bg-primary: #1A1A1A;
+  --color-bg-secondary: #262626;
+  --color-bg-surface: #333333;
+  --color-bg-elevated: #3E3E3E;
+  --color-bg-editor: #1E1E1E;
+  --color-border: #3C3C3C;
+  --color-border-subtle: #2E2E2E;
+  --color-border-focus: #FFA116;
+  --color-text-primary: #EFF1F6;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #858585;
+  --color-brand-leetcode: #FFA116;
+  --color-brand-success: #00B8A3;
+  --color-brand-submit: #2CBB5D;
+  --color-brand-warning: #FFA116;
+  --color-brand-error: #FF375F;
+  --color-brand-info: #3B82F6;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --radius-none: 0px;
+  --radius-sm: 3px;
+  --radius-DEFAULT: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1A1A1A;
+  color: #EFF1F6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* LeetCode style sharp custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3E3E3E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+.shadow-crisp {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Crisp focus rings without fuzzy glow */
+input:focus, textarea:focus, select:focus, button:focus-visible {
+  outline: 1px solid #FFA116;
+  outline-offset: -1px;
+}
